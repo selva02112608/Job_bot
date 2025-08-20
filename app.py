@@ -1,7 +1,9 @@
 import requests
 import time
 from datetime import datetime, timedelta, UTC
-from serpapi import Client as GoogleSearch
+# from serpapi import Client as GoogleSearch
+from serpapi import GoogleSearch
+
 
 BOT_TOKEN = "8226783276:AAEZsOzPRVIXrIsVB4Bi57swynogZvUfS8E"
 # Remove hardcoded CHAT_ID - will be stored dynamically
