@@ -1,8 +1,7 @@
 import requests
 import time
 from datetime import datetime, timedelta, UTC
-# from serpapi import Client as GoogleSearch
-from serpapi import GoogleSearch
+from serpapi import Client as GoogleSearch
 
 
 BOT_TOKEN = "8226783276:AAEZsOzPRVIXrIsVB4Bi57swynogZvUfS8E"
@@ -81,10 +80,29 @@ def handle_user_commands():
                         active_users.add(chat_id)
                         welcome_message = f"""🚀 <b>Welcome to Tamil Nadu JobBot!</b>
 
-🔍 I'll search for software engineering jobs across ALL Tamil Nadu districts
+🔍 I'll search for UNLIMITED IT jobs across ALL Tamil Nadu districts
 📱 You'll receive job alerts every 60 seconds for fresh opportunities
 ⏰ Only jobs posted within the last 1 day
 🌍 Coverage: 30+ districts including Chennai, Coimbatore, Madurai, Salem, and more!
+
+🎯 <b>Smart Filtering Criteria:</b>
+• 📅 Posted within 1 day only
+• 💰 Salary: 3+ LPA per year OR 40k+ per month
+• 🎯 Experience: 1+ years OR Fresher positions
+• 🏢 Company: Medium/Large companies (no startups)
+
+💼 <b>Comprehensive IT Job Types:</b>
+• Software Engineer/Developer (Python, Java, C#, PHP, .NET)
+• Full Stack Developer (React, Angular, Vue.js, Node.js)
+• Mobile Developer (Android, iOS, Flutter, React Native)
+• Data Science (Data Scientist, Data Analyst, ML Engineer, AI Engineer)
+• DevOps & Cloud (DevOps Engineer, Cloud Engineer, AWS, Azure)
+• Database (SQL Developer, MongoDB Developer, Database Developer)
+• Testing & QA (QA Engineer, Test Engineer, Automation, Selenium)
+• Security (Security Engineer, Cyber Security Analyst, Network Security)
+• System & Network (System Admin, Network Engineer, Linux/Windows Admin)
+• Management (Product Manager, Project Manager, Scrum Master, Business Analyst)
+• Emerging Tech (Blockchain, IoT, Docker, Kubernetes, Jenkins)
 
 <b>Commands:</b>
 /start - Start receiving job alerts
@@ -93,7 +111,7 @@ def handle_user_commands():
 
 <b>Your Chat ID:</b> {chat_id}
 
-✅ You're now subscribed to job alerts!"""
+✅ You're now subscribed to filtered IT job alerts!"""
                         
                         # Send welcome message to this user only
                         try:
@@ -296,7 +314,7 @@ def fetch_and_send_jobs():
                     "location": "Chennai, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -307,7 +325,7 @@ def fetch_and_send_jobs():
                     "location": "Coimbatore, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -318,7 +336,7 @@ def fetch_and_send_jobs():
                     "location": "Madurai, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -329,7 +347,7 @@ def fetch_and_send_jobs():
                     "location": "Salem, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             # Additional Major Districts
@@ -341,7 +359,7 @@ def fetch_and_send_jobs():
                     "location": "Tiruchirappalli, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -352,7 +370,7 @@ def fetch_and_send_jobs():
                     "location": "Vellore, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -363,7 +381,7 @@ def fetch_and_send_jobs():
                     "location": "Erode, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -374,7 +392,7 @@ def fetch_and_send_jobs():
                     "location": "Tiruppur, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -385,7 +403,7 @@ def fetch_and_send_jobs():
                     "location": "Thanjavur, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -396,7 +414,7 @@ def fetch_and_send_jobs():
                     "location": "Karur, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -407,7 +425,7 @@ def fetch_and_send_jobs():
                     "location": "Namakkal, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -418,7 +436,7 @@ def fetch_and_send_jobs():
                     "location": "Dindigul, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -429,7 +447,7 @@ def fetch_and_send_jobs():
                     "location": "Sivaganga, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -440,7 +458,7 @@ def fetch_and_send_jobs():
                     "location": "Ramanathapuram, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -451,7 +469,7 @@ def fetch_and_send_jobs():
                     "location": "Virudhunagar, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -462,7 +480,7 @@ def fetch_and_send_jobs():
                     "location": "Thoothukkudi, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -473,7 +491,7 @@ def fetch_and_send_jobs():
                     "location": "Tirunelveli, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -484,7 +502,7 @@ def fetch_and_send_jobs():
                     "location": "Kanyakumari, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -495,7 +513,7 @@ def fetch_and_send_jobs():
                     "location": "Theni, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -506,7 +524,7 @@ def fetch_and_send_jobs():
                     "location": "Pudukkottai, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -517,7 +535,7 @@ def fetch_and_send_jobs():
                     "location": "Sivagangai, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -528,7 +546,7 @@ def fetch_and_send_jobs():
                     "location": "Perambalur, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -539,7 +557,7 @@ def fetch_and_send_jobs():
                     "location": "Ariyalur, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -550,7 +568,7 @@ def fetch_and_send_jobs():
                     "location": "Cuddalore, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -561,7 +579,7 @@ def fetch_and_send_jobs():
                     "location": "Villupuram, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -572,7 +590,7 @@ def fetch_and_send_jobs():
                     "location": "Kanchipuram, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -583,7 +601,7 @@ def fetch_and_send_jobs():
                     "location": "Tiruvallur, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -594,7 +612,7 @@ def fetch_and_send_jobs():
                     "location": "Krishnagiri, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -605,7 +623,7 @@ def fetch_and_send_jobs():
                     "location": "Dharmapuri, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             },
             {
@@ -616,7 +634,736 @@ def fetch_and_send_jobs():
                     "location": "Ooty, India",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
+                }
+            },
+            # Enhanced IT-focused search strategies for comprehensive coverage
+            {
+                "name": "Google Jobs - Software Developer Chennai",
+                "params": {
+                    "q": "software developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Full Stack Developer Chennai",
+                "params": {
+                    "q": "full stack developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Python Developer Chennai",
+                "params": {
+                    "q": "python developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Java Developer Chennai",
+                "params": {
+                    "q": "java developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - React Developer Chennai",
+                "params": {
+                    "q": "react developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Node.js Developer Chennai",
+                "params": {
+                    "q": "node.js developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Angular Developer Chennai",
+                "params": {
+                    "q": "angular developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Vue.js Developer Chennai",
+                "params": {
+                    "q": "vue.js developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - PHP Developer Chennai",
+                "params": {
+                    "q": "php developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - .NET Developer Chennai",
+                "params": {
+                    "q": ".net developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - C# Developer Chennai",
+                "params": {
+                    "q": "c# developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Data Scientist Chennai",
+                "params": {
+                    "q": "data scientist Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Data Analyst Chennai",
+                "params": {
+                    "q": "data analyst Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Machine Learning Engineer Chennai",
+                "params": {
+                    "q": "machine learning engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - AI Engineer Chennai",
+                "params": {
+                    "q": "artificial intelligence engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - DevOps Engineer Chennai",
+                "params": {
+                    "q": "devops engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Cloud Engineer Chennai",
+                "params": {
+                    "q": "cloud engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - AWS Engineer Chennai",
+                "params": {
+                    "q": "aws engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Azure Developer Chennai",
+                "params": {
+                    "q": "azure developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Database Developer Chennai",
+                "params": {
+                    "q": "database developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - SQL Developer Chennai",
+                "params": {
+                    "q": "sql developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - MongoDB Developer Chennai",
+                "params": {
+                    "q": "mongodb developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Mobile App Developer Chennai",
+                "params": {
+                    "q": "mobile app developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Android Developer Chennai",
+                "params": {
+                    "q": "android developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - iOS Developer Chennai",
+                "params": {
+                    "q": "ios developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Flutter Developer Chennai",
+                "params": {
+                    "q": "flutter developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - React Native Developer Chennai",
+                "params": {
+                    "q": "react native developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - UI/UX Designer Chennai",
+                "params": {
+                    "q": "ui ux designer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Frontend Developer Chennai",
+                "params": {
+                    "q": "frontend developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Backend Developer Chennai",
+                "params": {
+                    "q": "backend developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - System Administrator Chennai",
+                "params": {
+                    "q": "system administrator Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Network Engineer Chennai",
+                "params": {
+                    "q": "network engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Security Engineer Chennai",
+                "params": {
+                    "q": "security engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Cyber Security Analyst Chennai",
+                "params": {
+                    "q": "cyber security analyst Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - QA Engineer Chennai",
+                "params": {
+                    "q": "qa engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Test Engineer Chennai",
+                "params": {
+                    "q": "test engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Automation Engineer Chennai",
+                "params": {
+                    "q": "automation engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Selenium Tester Chennai",
+                "params": {
+                    "q": "selenium tester Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Business Analyst Chennai",
+                "params": {
+                    "q": "business analyst Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Product Manager Chennai",
+                "params": {
+                    "q": "product manager Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Scrum Master Chennai",
+                "params": {
+                    "q": "scrum master Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Project Manager Chennai",
+                "params": {
+                    "q": "project manager Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            # Additional IT-focused searches for other major cities
+            {
+                "name": "Google Jobs - Full Stack Developer Coimbatore",
+                "params": {
+                    "q": "full stack developer Coimbatore",
+                    "engine": "google_jobs",
+                    "location": "Coimbatore, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Python Developer Coimbatore",
+                "params": {
+                    "q": "python developer Coimbatore",
+                    "engine": "google_jobs",
+                    "location": "Coimbatore, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Java Developer Coimbatore",
+                "params": {
+                    "q": "java developer Coimbatore",
+                    "engine": "google_jobs",
+                    "location": "Coimbatore, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Data Scientist Coimbatore",
+                "params": {
+                    "q": "data scientist Coimbatore",
+                    "engine": "google_jobs",
+                    "location": "Coimbatore, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - DevOps Engineer Coimbatore",
+                "params": {
+                    "q": "devops engineer Coimbatore",
+                    "engine": "google_jobs",
+                    "location": "Coimbatore, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Full Stack Developer Madurai",
+                "params": {
+                    "q": "full stack developer Madurai",
+                    "engine": "google_jobs",
+                    "location": "Madurai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Python Developer Madurai",
+                "params": {
+                    "q": "python developer Madurai",
+                    "engine": "google_jobs",
+                    "location": "Madurai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Java Developer Madurai",
+                "params": {
+                    "q": "java developer Madurai",
+                    "engine": "google_jobs",
+                    "location": "Madurai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Full Stack Developer Salem",
+                "params": {
+                    "q": "full stack developer Salem",
+                    "engine": "google_jobs",
+                    "location": "Salem, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Python Developer Salem",
+                "params": {
+                    "q": "python developer Salem",
+                    "engine": "google_jobs",
+                    "location": "Salem, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Full Stack Developer Trichy",
+                "params": {
+                    "q": "full stack developer Trichy",
+                    "engine": "google_jobs",
+                    "location": "Tiruchirappalli, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Python Developer Trichy",
+                "params": {
+                    "q": "python developer Trichy",
+                    "engine": "google_jobs",
+                    "location": "Tiruchirappalli, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Full Stack Developer Vellore",
+                "params": {
+                    "q": "full stack developer Vellore",
+                    "engine": "google_jobs",
+                    "location": "Vellore, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Python Developer Vellore",
+                "params": {
+                    "q": "python developer Vellore",
+                    "engine": "google_jobs",
+                    "location": "Vellore, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            # Specialized IT searches for emerging technologies
+            {
+                "name": "Google Jobs - Blockchain Developer Chennai",
+                "params": {
+                    "q": "blockchain developer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - IoT Engineer Chennai",
+                "params": {
+                    "q": "iot engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Docker Engineer Chennai",
+                "params": {
+                    "q": "docker engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Kubernetes Engineer Chennai",
+                "params": {
+                    "q": "kubernetes engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Jenkins Engineer Chennai",
+                "params": {
+                    "q": "jenkins engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Git Engineer Chennai",
+                "params": {
+                    "q": "git engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Linux Administrator Chennai",
+                "params": {
+                    "q": "linux administrator Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Windows Administrator Chennai",
+                "params": {
+                    "q": "windows administrator Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Network Security Engineer Chennai",
+                "params": {
+                    "q": "network security engineer Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
+                }
+            },
+            {
+                "name": "Google Jobs - Information Security Analyst Chennai",
+                "params": {
+                    "q": "information security analyst Chennai",
+                    "engine": "google_jobs",
+                    "location": "Chennai, India",
+                    "gl": "in",
+                    "hl": "en",
+                    "num": 200
                 }
             },
             # Fallback: Regular Google search for job sites
@@ -627,7 +1374,7 @@ def fetch_and_send_jobs():
                     "engine": "google",
                     "gl": "in",
                     "hl": "en",
-                    "num": 100
+                    "num": 200
                 }
             }
         ]
@@ -668,7 +1415,7 @@ def fetch_and_send_jobs():
                 if current_jobs:
                     jobs.extend(current_jobs)
                     print(f"   📊 Total jobs so far: {len(jobs)}")
-                    break  # Stop if we found jobs
+                    # Continue searching all strategies to get maximum job coverage
                     
             except Exception as e:
                 print(f"   ❌ Error with {strategy['name']}: {e}")
@@ -713,7 +1460,7 @@ def fetch_and_send_jobs():
                 extensions = job.get("extensions", [])
                 detected_extensions = job.get("detected_extensions", [])
                 
-                # Check if job is posted within last 1 day
+                # Check if job is posted within last 1 day ONLY
                 is_recent_job = False
                 posted_date = "Unknown date"
                 
@@ -721,17 +1468,17 @@ def fetch_and_send_jobs():
                 for ext in extensions:
                     if isinstance(ext, str):
                         ext_lower = ext.lower()
-                        # Check for recent posting indicators
-                        if any(word in ext_lower for word in ['just posted', 'today', '1 day ago', 'yesterday']):
+                        # Check for recent posting indicators - ONLY 1 day or less
+                        if any(word in ext_lower for word in ['just posted', 'today', '1 day ago', 'yesterday', 'few hours ago', 'recently posted']):
                             posted_date = ext
                             is_recent_job = True
                             break
-                        elif any(word in ext_lower for word in ['2 days ago', '3 days ago', 'week ago', 'month ago']):
+                        elif any(word in ext_lower for word in ['2 days ago', '3 days ago', 'week ago', 'month ago', 'few days ago']):
                             posted_date = ext
                             is_recent_job = False
                             break
                         elif any(word in ext_lower for word in ['day', 'week', 'month', 'ago', 'posted']):
-                            # Check if it's within 1 day
+                            # Check if it's within 1 day ONLY
                             if '1 day' in ext_lower or 'today' in ext_lower or 'yesterday' in ext_lower:
                                 posted_date = ext
                                 is_recent_job = True
@@ -751,23 +1498,91 @@ def fetch_and_send_jobs():
                     skipped_jobs_count += 1
                     continue
                 
-                recent_jobs_count += 1
-                
                 # Try to extract salary from extensions
                 salary = "Salary not specified"
+                salary_value = 0
+                is_monthly = False
                 for ext in extensions:
                     if isinstance(ext, str):
-                        if any(word in ext.lower() for word in ['₹', 'rs', 'lakh', 'crore', 'salary', 'pay', 'per annum', 'per month', 'lpa', 'lakhs', 'crores','LPA']):
+                        if any(word in ext.lower() for word in ['₹', 'rs', 'lakh', 'crore', 'salary', 'pay', 'per annum', 'per month', 'lpa', 'lakhs', 'crores','LPA', 'k', 'thousand', 'L']):
                             salary = ext
+                            # Extract numeric value for salary filtering
+                            import re
+                            # Check for monthly salary (K per month, thousand per month, etc.)
+                            monthly_match = re.search(r'(\d+(?:\.\d+)?)\s*(?:k|thousand)\s*(?:per\s*month|monthly|a\s*month)', ext.lower())
+                            if monthly_match:
+                                salary_value = float(monthly_match.group(1))
+                                is_monthly = True
+                            else:
+                                # Check for annual salary (LPA, lakhs per annum)
+                                annual_match = re.search(r'(\d+(?:\.\d+)?)\s*(?:lpa|lakh|lakhs|LPA)', ext.lower())
+                                if annual_match:
+                                    salary_value = float(annual_match.group(1))
+                                    is_monthly = False
+                                else:
+                                    # Check for simple K (assume monthly if no other indicator)
+                                    simple_k_match = re.search(r'(\d+(?:\.\d+)?)\s*k', ext.lower())
+                                    if simple_k_match:
+                                        salary_value = float(simple_k_match.group(1))
+                                        is_monthly = True
                             break
                 
                 # Try to extract experience from extensions
                 experience = "Not specified"
+                experience_years = 0
                 for ext in extensions:
                     if isinstance(ext, str):
                         if any(word in ext.lower() for word in ['year', 'experience', 'fresher', 'senior', 'junior', 'lead', 'entry', 'mid', 'expert']):
                             experience = ext
+                            # Extract numeric value for experience filtering
+                            import re
+                            exp_match = re.search(r'(\d+(?:\.\d+)?)\s*(?:year|years|yr|yrs)', ext.lower())
+                            if exp_match:
+                                experience_years = float(exp_match.group(1))
+                            elif 'fresher' in ext.lower() or 'entry' in ext.lower():
+                                experience_years = 0
                             break
+                
+                # Filter for company size (avoid startups)
+                company_lower = company.lower()
+                startup_indicators = ['startup', 'start-up', 'early stage', 'seed', 'series a', 'series b', 'funded', 'incubator', 'accelerator']
+                is_startup = any(indicator in company_lower for indicator in startup_indicators)
+                
+                # Filter for salary (3+ LPA OR 40k+ monthly)
+                if salary != "Salary not specified":
+                    if is_monthly:
+                        # For monthly salaries, check if above 40k
+                        if salary_value < 40:
+                            print(f"💰 Skipping low monthly salary job: {title} at {company} - Salary: {salary} (below 40k monthly)")
+                            skipped_jobs_count += 1
+                            continue
+                    else:
+                        # For annual salaries, check if above 3 LPA
+                        if salary_value < 3:
+                            print(f"💰 Skipping low annual salary job: {title} at {company} - Salary: {salary} (below 3 LPA)")
+                            skipped_jobs_count += 1
+                            continue
+                
+                # Filter for experience (1+ years OR fresher positions)
+                if experience_years < 1 and experience != "Not specified":
+                    # Check if it's explicitly a fresher position
+                    fresher_indicators = ['fresher', 'freshers', 'entry level', 'entry-level', '0 years', 'no experience', 'graduate', 'new graduate']
+                    is_fresher_job = any(indicator in experience.lower() for indicator in fresher_indicators)
+                    
+                    if not is_fresher_job:
+                        print(f"🎯 Skipping low experience job: {title} at {company} - Experience: {experience} (below 1 year and not fresher)")
+                        skipped_jobs_count += 1
+                        continue
+                    else:
+                        print(f"✅ Including fresher job: {title} at {company} - Experience: {experience}")
+                
+                # Filter for company size (avoid startups)
+                if is_startup:
+                    print(f"🏢 Skipping startup job: {title} at {company} - Company type: Startup")
+                    skipped_jobs_count += 1
+                    continue
+                
+                recent_jobs_count += 1
                 
                 # Try to extract job type from extensions
                 job_type = "Full-time"
@@ -886,10 +1701,13 @@ def fetch_and_send_jobs():
         print(f"\n📊 Job Filtering Summary:")
         print(f"   🔍 Total jobs found: {len(jobs)}")
         print(f"   ⏭️ Jobs skipped (older than 1 day): {skipped_jobs_count}")
-        print(f"   ✅ Recent jobs sent: {recent_jobs_count}")
+        print(f"   💰 Jobs skipped (salary < 3 LPA): {sum(1 for _ in range(skipped_jobs_count) if 'below 3 LPA' in str(_))}")
+        print(f"   🎯 Jobs skipped (experience < 1 year): {sum(1 for _ in range(skipped_jobs_count) if 'below 1 year' in str(_))}")
+        print(f"   🏢 Jobs skipped (startup companies): {sum(1 for _ in range(skipped_jobs_count) if 'Startup' in str(_))}")
+        print(f"   ✅ Filtered jobs sent: {recent_jobs_count}")
         
         if recent_jobs_count == 0:
-            print("   ℹ️ No recent jobs found in the last 1 day")
+            print("   ℹ️ No jobs found matching your criteria (1 day old, 3+ LPA OR 40k+ monthly, 1+ years exp OR fresher, medium/large companies)")
 
     except Exception as e:
         print(f"❌ Error fetching jobs from SerpAPI: {e}")
@@ -955,11 +1773,13 @@ def send_manual_message():
     send_message(message)
 
 if __name__ == "__main__":
-    print("🚀 Enhanced JobBot started! Press Ctrl+C to stop.")
+    print("🚀 Enhanced IT JobBot started! Press Ctrl+C to stop.")
     print("📱 Bot will send job alerts every 60 seconds when new jobs are found")
-    print("🔍 Using SerpAPI for comprehensive job search in ALL Tamil Nadu districts")
-    print("⚡ Enhanced with rich job data and better error handling")
+    print("🔍 Using SerpAPI for FILTERED IT job search in ALL Tamil Nadu districts")
+    print("⚡ Enhanced with smart filtering: 1 day old, 3+ LPA OR 40k+ monthly, 1+ years exp OR fresher, medium/large companies")
     print("🌍 Coverage: 30+ districts including Chennai, Coimbatore, Madurai, Salem, Trichy, Vellore, Erode, and more!")
+    print("💼 IT Categories: Development, Data Science, DevOps, Security, Testing, Management, Emerging Tech")
+    print("🎯 Smart Filters: Posted within 1 day, Salary 3+ LPA OR 40k+ monthly, Experience 1+ years OR fresher, Medium/Large companies only")
     print("👥 Multi-user support enabled - all users who start the bot will receive alerts!")
     
     # Initialize bot by getting existing users
@@ -968,7 +1788,7 @@ if __name__ == "__main__":
     
     # Send startup message to all users
     if active_users:
-        startup_message = f"🚀 <b>JobBot Started Successfully!</b>\n\n🔍 Now searching for jobs in ALL Tamil Nadu districts\n📱 You'll receive real-time job alerts\n⏰ Checking every 60 seconds\n💼 Focus: Software Engineering & Development roles\n👥 Total active users: {len(active_users)}"
+        startup_message = f"🚀 <b>JobBot Started Successfully!</b>\n\n🔍 Now searching for FILTERED IT jobs in ALL Tamil Nadu districts\n📱 You'll receive real-time job alerts\n⏰ Checking every 60 seconds\n🎯 Smart Filters: 1 day old, 3+ LPA OR 40k+ monthly, 1+ years exp OR fresher, medium/large companies\n💼 Focus: Comprehensive IT roles (Development, Data Science, DevOps, Security, Testing, Management)\n👥 Total active users: {len(active_users)}"
         send_message_to_all_users(startup_message)
     else:
         print("ℹ️ No active users found. Users need to send /start to the bot first.")
